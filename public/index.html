@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de  reservas de salas de reunion</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    
+    <div class="salas-container">
+        <h1>Gestion de  reservas de salas de reunion</h1>
+
+        <h2>SALAS</h2>
+        <form id="sala-form">
+            <label for="sala-id">ID de sala:</label>
+            <input type="number" id="sala-id" placeholder="ID sala" required >
+
+            <label for="sala-name">Nombre de sala:</label>
+            <input type="text" id="sala-name" placeholder="Nombre del equipo" required >
+
+            <label for="sala-capacidad">Capacidad:</label>
+            <input type="number" id="sala-capacidad" placeholder="Numero de personas" required >
+
+            <label for="sala-estado">Estado</label>
+            <input type="text" id="sala-estado" value='activo' required >
+
+            <button type="submit">Guardar Sala</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre de sala</th>
+                    <th>Capacidad</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+               </tr>
+            </thead>
+            <tbody id="sala-list"></tbody>
+        </table>
+
+
+        <h2>RESERVAS</h2>
+
+        <form id="reserva-form">
+            <label for="reserva-id">ID de Reserva:</label>
+            <input type="number" id="reserva-id" placeholder="ID reserva" required >
+
+            <label for="reserva-sala-id">ID de sala:</label>
+            <input type="number" id="reserva-sala-id" placeholder="ID sala" required >
+
+            <label for="reserva-name">Nombre del Reservante:</label>
+            <input type="text" id="reserva-name" placeholder="Nombre y Apellido" required >
+
+            <label for="reserva-inicio">Fecha y Hora de Inicio:</label>
+            <input type="datetime-local" id="reserva-inicio" required >
+
+            <label for="reserva-fin">Fecha y Hora de Finalizacion:</label>
+            <input type="datetime-local" id="reserva-fin" required >
+
+            <button type="submit">Guardar Reserva</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Reserva</th>
+                    <th>ID Sala</th>
+                    <th>Nombre del Reservante</th>
+                    <th>Fecha y Hora de Inicio</th>
+                    <th>Fecha y Hora de Finalizacion</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="reserva-list"></tbody>
+        </table>
+    </div>
+
+    <script src="/scrip.js"></script>
+</body>
+</html>
